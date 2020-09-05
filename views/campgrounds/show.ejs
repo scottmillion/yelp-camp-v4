@@ -1,4 +1,4 @@
-<%- include("partials/header") %>
+<%- include("../partials/header") %>
 <h1 class="text-center"><%= campground.name %></h1>
 
 <p class="text-center"><img src="<%= campground.image %>" alt="" width="300px" height="200px"></p>
@@ -10,12 +10,13 @@
 </p>
 <% }); %>
 
-
-<p class="text-center"><a href="/campgrounds">Back</a></p>
-
-
-
-
+<div class="text-center my-4">
+  <span><a href="/campgrounds" class="btn btn-success mr-1 btn-lg">Back</a></span>
+  <span><a href="<%= campground.id %>/comments/new" class="btn btn-lg btn-primary ml-1">Leave Comment</a></span>
+</div>
 
 
-<%- include("partials/footer") %>
+
+
+
+<%- include("../partials/footer") %>
