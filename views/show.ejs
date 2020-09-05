@@ -1,0 +1,21 @@
+<%- include("partials/header") %>
+<h1 class="text-center"><%= campground.name %></h1>
+
+<p class="text-center"><img src="<%= campground.image %>" alt="" width="300px" height="200px"></p>
+<p class="text-center"><%= campground.description %></p>
+
+<% campground.comments.forEach((comment) => { %>
+<p class="text-center">
+  <strong><%= comment.author %></strong> - <%= comment.text %>
+</p>
+<% }); %>
+
+
+<p class="text-center"><a href="/campgrounds">Back</a></p>
+
+
+
+
+
+
+<%- include("partials/footer") %>
